@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Οι Πίτες του Πίτου - Οι Πίτες</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h2><a href="index.html">Οι Πίτες του Πίτου</a></h2>
+      <p>Ποιοτικές πίτες - μόνο χειροποίητο φύλλο</p>
+      <nav>
+        <ul>
+          <li><a href="store.html">Κατάστημα</a></li>
+          <li><a href="pies.html">Πίτες</a></li>
+          <li><a href="contact.html">Επικοινωνία</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <table>
+        <thead>
+          <th>Oι Πίτες Μας</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="./img/spanakopita.jpg" alt="σπανακοπιτα" /></td>
+            <td>Σπανακόπιτα</td>
+            <td>4&#128;</td>
+          </tr>
+          <tr>
+            <td><img src="./img/manitaropita.jpg" alt="Μανιταρόπιτα" /></td>
+            <td>Μανιταρόπιτα</td>
+            <td>5&#128;</td>
+          </tr>
+
+          <tr>
+            <td><img src="./img/prasopita.jpg" alt="Πρασόπιτα" /></td>
+            <td>Πρασόπιτα</td>
+            <td>3.5&#128;</td>
+          </tr>
+          <tr>
+            <td><img src="./img/boureki.jpg" alt="Μπουρέκι" /></td>
+            <td>Μπουρέκι</td>
+            <td>4.5&#128;</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Timologio -->
+      <h2>Οι πίτες μας στο χώρο σας!</h2>
+      <p>Ωράριο λήψης παραγγελών (18:00-22:00)</p>
+      <form action="/getData" method="post">
+        <fieldset width="250px">
+          <legend>Πληροφορίες Παράδοσης:</legend>
+          <label for="Name">Ονοματεπώνυμο:</label>
+          <input
+            type="text"
+            name="Name"
+            id="Name"
+            required
+            minlength="4"
+            maxlength="30"
+          />(*) <br />
+          <label for="adress">Διέυθυνση(Οδός-Αριθμός):</label>
+          <input type="text" name="adress" id="adress" required />(*) <br />
+          <label for="City">Περιοχή:</label>
+          <select name="City" id="City">
+            <option value="Μαρούσι">Μαρούσι</option>
+            <option value="Πεντελη">Πεντελη</option>
+            <option value="Κυφησια">Κυφησια</option>
+            <option value="Ομονια">Ομονια</option>
+          </select>
+          <br />
+          <label for="email">E-mail:</label>
+          <input type="email" name="email" id="email" /> <br />
+          <label for="phone">Τηλέφωνο:</label>
+          <input type="tel" name="phone" id="phone" required />(*) <br />
+          <label for="text">Ειδικές Πληροφορίες για την παράδοση:</label> <br />
+          <textarea name="text" id="text" cols="40" rows="8"></textarea> <br />
+          (*) Τα πεδία είναι υποχρεωτικά
+        </fieldset>
+        <fieldset>
+          <legend>Παραγγελία:</legend>
+          <label for="Σπανακόπιτα">&bull; Σπανακόπιτα:</label>
+          <input
+            type="number"
+            name="Σπανακόπιτα"
+            id="Σπανακόπιτα"
+            value="0"
+            min="0"
+            max="20"
+          />
+          <br />
+          <label for="Μανιταρόπιτα">&bull; Μανιταρόπιτα:</label>
+          <input
+            type="number"
+            name="Μανιταρόπιτα"
+            id="Μανιταρόπιτα"
+            value="0"
+            min="0"
+            max="20"
+          />
+          <br />
+          <label for="Πρασόπιτα">&bull; Πρασόπιτα:</label>
+          <input
+            type="number"
+            name="Πρασόπιτα"
+            id="Πρασόπιτα"
+            value="0"
+            min="0"
+            max="20"
+          />
+          <br />
+          <label for="Μπουρέκι">&bull; Μπουρέκι:</label>
+          <input
+            type="number"
+            name="Μπουρέκι"
+            id="Μπουρέκι"
+            value="0"
+            min="0"
+            max="20"
+          />
+          <br />
+
+          <input type="checkbox" name="Prosfora" id="Prosfora" />
+          <label for="Prosfora"
+            >Ενσωμάτοση προσφοράς στις 10 η 1 πίτα δώρο</label
+          >
+        </fieldset>
+
+        <!-- Tropos Plhromhs -->
+        <fieldset>
+          <legend>Τρόπος Πληρομής:</legend>
+          <input type="radio" name="plhromh" id="VISA" />
+          <label for="VISA">VISA</label>
+          <input type="radio" name="plhromh" id="Μετρητά" />
+          <label for="Μετρητά">Μετρητά</label>
+          <input type="radio" name="plhromh" id="Είδος" />
+          <label for="Είδος">Είδος</label>
+        </fieldset>
+        <!-- Buttons -->
+        <input type="submit" name="submit" id="submit" />
+        <input type="reset" name="reset" id="reset" />
+      </form>
+    </main>
+
+    <aside>
+      <h2>Προσφορές</h2>
+      <p>Giveaway 1</p>
+      <p>Στις 10 η 1 δώρο</p>
+    </aside>
+
+    <footer>
+      <p>&copy; Οι Πίτες του Πίτου 2021</p>
+    </footer>
+  </body>
+</html>
